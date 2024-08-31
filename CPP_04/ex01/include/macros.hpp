@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 11:40:01 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/27 12:08:58 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/08/31 10:23:37 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,9 @@
 # define LGTCYN "\033[96m"
 # define LGTGRY "\033[91m"
 
-//background colours e
+//background colours 
+#
+# define BGNBLC "\033[40m"
 # define BGNRED "\033[41m"
 # define BGNGRN "\033[42m"
 # define BGNYLW "\033[43m"
@@ -46,20 +48,27 @@
 # define BGNLGTMGT "\033[105m"
 # define BGNLGTCYN "\033[106m"
 
-
+// text formating
 # define BLD "\033[1m"
 # define FNT "\033[2m"
 # define UNL "\033[4m"
 
-// max values for ScavTrap
 
-# define MAX_HP 100
-# define MAX_EP 50
+
+# define ANI CYN "Animal " RST
+
+# define CAT CYN "Cat " RST
+
+# define DOG CYN "Dog " RST
+
+# define WRAN CYN "Wrong Animal " RST
+
+# define BRAIN CYN "Brain " RST
+
+# define WRCA CYN "Wrong Cat " RST
 
 # define DSTOR RED BLD "DESTRUCTOR " RST
 
 # define CNTOR GRN BLD "CONSTRUCTOR " RST
 
 # define ERR BGNRED BLD "ERROR" RST
-
-# define EN_PO BLU " Energy points" RST 
