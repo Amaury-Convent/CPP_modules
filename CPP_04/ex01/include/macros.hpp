@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 11:40:01 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 10:23:37 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/09/01 12:24:58 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,19 @@
 // foreground colours
 # define BLC "\033[30"
 # define RED "\033[31m"
+# define DRKRED "\033[38;2;250;20;5m"
+# define PINK "\033[38;2;221;49;191m"
 # define GRN "\033[32m"
+# define DRKGRN "\033[38;2;4;160;20m"
+# define ORG "\033[38;2;177;100;40m"
+
+
+# define MIN "\033[38;2;56;141;103m"
 # define YLW "\033[33m"
 # define BLU "\033[34m"
 # define MGT "\033[35m"
 # define CYN "\033[36m"
+# define DRKBLU "\033[38;2;24;111;233m"
 # define GRY "\033[90m"
 # define LGTRED "\033[91m"
 # define LGTGRN "\033[92m"
@@ -32,8 +40,8 @@
 # define LGTGRY "\033[91m"
 
 //background colours 
-#
 # define BGNBLC "\033[40m"
+# define DRKBLUBGR "\033[48;2;24;169;233m"
 # define BGNRED "\033[41m"
 # define BGNGRN "\033[42m"
 # define BGNYLW "\033[43m"
@@ -53,22 +61,25 @@
 # define FNT "\033[2m"
 # define UNL "\033[4m"
 
+// max values for Claptrap
 
 
-# define ANI CYN "Animal " RST
+# define ANI DRKBLU "Animal " RST
 
-# define CAT CYN "Cat " RST
+# define CAT DRKBLU "Cat " RST
 
-# define DOG CYN "Dog " RST
+# define DOG DRKBLU "Dog " RST
 
-# define WRAN CYN "Wrong Animal " RST
+# define WRAN DRKBLU "Wrong Animal " RST
 
-# define BRAIN CYN "Brain " RST
+# define BRAIN PINK "Brain " RST
 
-# define WRCA CYN "Wrong Cat " RST
+# define WRCA DRKBLU "Wrong Cat " RST
 
-# define DSTOR RED BLD "DESTRUCTOR " RST
+# define MEMADR UNL GRN "the memory address " RST
 
-# define CNTOR GRN BLD "CONSTRUCTOR " RST
+# define DSTOR DRKRED BLD "DESTRUCTOR " RST
+
+# define CNTOR DRKGRN BLD "CONSTRUCTOR " RST
 
 # define ERR BGNRED BLD "ERROR" RST

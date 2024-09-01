@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 12:31:16 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 11:41:26 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/09/01 12:11:46 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::Cat()
 Cat::Cat(const Cat &cpy)
 {
 	this->type = cpy.gettype();
-	this->brain = new Brain (*cpy.brain);
+	this->brain = new Brain(*cpy.brain);
 	std::cout << CAT " copy" CNTOR "called" << std::endl;
 }
 

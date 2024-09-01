@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/31 10:19:13 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 11:37:54 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/09/01 13:08:34 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain()
 {
-	for(int i = 0; i < 101; i++)
+	for(int i = 0; i < 100; i++)
 	{
 		if (i % 2 == 0)
 			ideas[i] = "I am";
@@ -23,8 +23,16 @@ Brain::Brain()
 	}
 	std::cout << "Default " BRAIN  CNTOR "called" << std::endl;
 }
-Brain::Brain(const Brain &cpy) : ideas (cpy.ideas)
+Brain::Brain(const Brain &cpy)
 {
+	for (int i = 0; i < 100; i++)
+	{
+		if (i % 2 == 0)
+			this->ideas[i] = cpy.ideas[i] + RED " copying" RST;
+		else
+			this->ideas[i] = RED "the " RST + cpy.ideas[i] ;
+
+	}
 	std::cout << BRAIN "copy " CNTOR "called" << std::endl;
 }
 Brain::~Brain()
@@ -35,7 +43,7 @@ Brain::~Brain()
 
 Brain &Brain::operator=(const Brain &src)
 {
-	for(int i = 0; i < 101; i++)
+	for(int i = 0; i < 100; i++)
 		this->ideas[i] = src.ideas[i];
 	std::cout << BRAIN DSTOR "called" << std::endl;
 	return (*this);

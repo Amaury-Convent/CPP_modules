@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 12:23:22 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 10:41:03 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/09/01 12:17:00 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : protected Animal , public Brain
+class Dog : public Animal 
 {
 	private : 
 		Brain *brain;
@@ -30,4 +30,5 @@ class Dog : protected Animal , public Brain
 		void makeSound() const;
 		std::string gettype() const;
 		Brain *getBrain() const;
+		void comparingdogs(const Dog &other_dog);
 };

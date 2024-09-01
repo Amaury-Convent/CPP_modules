@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 12:23:17 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 11:36:51 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/09/01 11:29:41 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,8 @@
 
 class Animal
 {
-	protected :
-		std::string type;
-	
 	public :
+		std::string type;
 	// constructor and destrcutors
 		Animal();
 		Animal(const Animal &cpy);

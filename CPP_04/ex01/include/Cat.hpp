@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 12:23:19 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 10:36:52 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/09/01 11:30:00 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : protected Animal , public Brain
+class Cat : public Animal
 {
 	private : 
 		Brain *brain;
