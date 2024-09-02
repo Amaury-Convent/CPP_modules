@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 12:31:16 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 12:57:44 by aconvent         ###   ########.fr       */
+/*   Updated: 2024/09/02 12:01:18 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ WrongCat::~WrongCat()
 
 void WrongCat::makeSound() const
 {
-	std::cout <<  "\"strange barking\"" << std::endl;
+	WrongAnimal::makeSound();
 }
 
 std::string WrongCat::gettype() const
