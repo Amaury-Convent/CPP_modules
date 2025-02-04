@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 11:40:01 by aconvent          #+#    #+#             */
-/*   Updated: 2024/08/31 13:05:13 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/04 12:17:13 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,20 +62,16 @@
 # define UNL "\033[4m"
 
 // max values for Claptrap
+ 
+# define CALL " has been called"
+
+# define DFLTDSTOR "default " DRKRED BLD "DESTRUCTOR " RST CALL
+
+# define DFLTCNTOR "default " DRKGRN BLD "CONSTRUCTOR " RST CALL
+
+# define PARCNTOR CYN "parametrized "  DRKGRN BLD "CONSTRUCTOR " RST CALL
 
 
-# define ANI DRKBLU "Animal " RST
-
-# define CAT DRKBLU "Cat " RST
-
-# define DOG DRKBLU "Dog " RST
-
-# define WRAN DRKBLU "Wrong Animal " RST
-
-# define WRCA DRKBLU "Wrong Cat " RST
-
-# define DSTOR DRKRED BLD "DESTRUCTOR " RST
-
-# define CNTOR DRKGRN BLD "CONSTRUCTOR " RST
+# define CPYCNTOP LGTRED "copy " RST DRKGRN BLD "CONSTRUCTOR " RST CALL
 
 # define ERR BGNRED BLD "ERROR" RST
