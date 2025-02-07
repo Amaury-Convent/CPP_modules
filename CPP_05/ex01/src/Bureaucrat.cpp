@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 11:57:44 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/05 14:42:39 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/07 11:04:16 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Bureaucrat::Bureaucrat() : _name("Bob"), _grade(120)
 	else if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	std::cout << DFLTCNTOR << std::endl;
+	std::cout << DRKBLU << _name << RST " has been created with a grade of " RED << _grade << RST << std::endl;
 	
 }
 
@@ -29,6 +30,7 @@ Bureaucrat::Bureaucrat(const std::string name , unsigned int grade) : _name(name
 	else if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
 	std::cout << PARCNTOR << std::endl;
+	std::cout << DRKBLU << _name << RST " has been created with a grade of " RED << _grade << RST << std::endl;
 	
 }
 
@@ -52,8 +54,8 @@ void Bureaucrat::decrement()
 }
 void Bureaucrat::increment()
 {
-	if (this->_grade >= 1)
 		throw Bureaucrat::GradeTooHighException();
+	if (this->_grade >= 1)
 	this->_grade--;
 	
 }

@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:02:24 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/05 16:19:27 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/07 11:48:22 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 class Form
 {
 	private :
+		std::string _name;
 		const int _signing;
 		const int _execute;
-		const std::string _name;
 		bool _signed;
 		
 	public :
@@ -32,11 +32,22 @@ class Form
 		//overrite opperators 
 		Form & operator=(const Form &src);
 		
-		void getName();
-		void getSigningGrade();
-		void getExecutionGrade();
+		std::string getName() const ;
+		const int getSigningGrade()const ;
+		const int getExecutionGrade() const;
 		
+		bool beSigned(const Bureaucrat &src);
+	class GradeTooHighException : public std::exception
+	{
+		public :
+			const char *what() const noexcept override;
+	};
+	class GradeTooLowException : public std::exception
+	{
+		public :
+			const char *what() const noexcept override;
+	};
 		
 
 };
-
+std::ostream &operator<<(std::ostream &s, Form &form);
