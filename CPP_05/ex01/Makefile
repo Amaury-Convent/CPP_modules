@@ -6,7 +6,7 @@
 #    By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 10:56:42 by aconvent          #+#    #+#              #
-#    Updated: 2025/02/05 14:44:54 by aconvent         ###   ########.fr        #
+#    Updated: 2025/02/13 12:14:03 by aconvent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ OBJS := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
 ######## Compiler and flags ########
 
 CPP := c++ 
-CFLAGS = -Wall -Wextra -Werror -std=c++11 -I ./include 
+CFLAGS = -Wall -Wextra -Werror -std=c++11 -I ./include -MMD
 
 ######## first rule called by make ########
 

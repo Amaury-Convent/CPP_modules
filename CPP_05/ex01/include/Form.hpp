@@ -6,12 +6,14 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:02:24 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/07 11:48:22 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/13 12:39:45 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -27,16 +29,18 @@ class Form
 		Form(const std::string _name , const int _signing , const int _execute);
 		Form(const int _signing, const int _execute);
 		Form(const std::string _name);
+		Form(Form const &src);
 		~Form();
 		
 		//overrite opperators 
 		Form & operator=(const Form &src);
 		
 		std::string getName() const ;
-		const int getSigningGrade()const ;
-		const int getExecutionGrade() const;
+		bool getSigned()const;
+		int getSigningGrade()const ;
+		int getExecutionGrade() const;
 		
-		bool beSigned(const Bureaucrat &src);
+		void beSigned(const Bureaucrat &src);
 	class GradeTooHighException : public std::exception
 	{
 		public :
@@ -50,4 +54,4 @@ class Form
 		
 
 };
-std::ostream &operator<<(std::ostream &s, Form &form);
+std::ostream& operator<<(std::ostream &os, Form const &form);

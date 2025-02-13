@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/04 11:37:42 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/05 16:16:37 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/11 15:58:02 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 # include <string>
 # include <exception>
 #include "macros.hpp"
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat 
 {
@@ -29,8 +32,16 @@ class Bureaucrat
 		~Bureaucrat();
 	//Assignement operator	
 		Bureaucrat &operator=(const Bureaucrat &src);
-		std::string getName() const;
+		
+	//getter and setters
+		/*
+			getter are being set as const telling that the function
+			won't modifie the values
+		*/
 		int getGrade() const ;
+		std::string getName() const;
+		
+		void signForm(Form &Form);
 		void increment();
 		void decrement();
 		

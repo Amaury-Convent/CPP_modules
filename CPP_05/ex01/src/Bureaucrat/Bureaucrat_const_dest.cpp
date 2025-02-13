@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
+/*   Bureaucrat_const_dest.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/25 11:57:44 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/07 11:04:16 by aconvent         ###   ########.fr       */
+/*   Created: 2025/02/11 15:48:21 by aconvent          #+#    #+#             */
+/*   Updated: 2025/02/13 12:04:09 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/Bureaucrat.hpp"
+#include "../../include/Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Bob"), _grade(120)
 {
@@ -18,7 +18,7 @@ Bureaucrat::Bureaucrat() : _name("Bob"), _grade(120)
 		throw Bureaucrat::GradeTooLowException();
 	else if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	std::cout << DFLTCNTOR << std::endl;
+	std::cout << DFLT << " Bureaucrat "<< CNTOR CALL << std::endl;
 	std::cout << DRKBLU << _name << RST " has been created with a grade of " RED << _grade << RST << std::endl;
 	
 }
@@ -29,61 +29,23 @@ Bureaucrat::Bureaucrat(const std::string name , unsigned int grade) : _name(name
 		throw Bureaucrat::GradeTooLowException();
 	else if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	std::cout << PARCNTOR << std::endl;
+	std::cout << PAR << " Bureaucrat"<< CNTOR CALL << std::endl;
 	std::cout << DRKBLU << _name << RST " has been created with a grade of " RED << _grade << RST << std::endl;
 	
 }
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << DFLTDSTOR  << std::endl;
+	std::cout << DFLT << "Bureaucrat " << DSTOR CALL << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &cpy)
+Bureaucrat::Bureaucrat(const Bureaucrat &cpy) :
+_name(cpy.getName() + "_copy") , _grade(cpy.getGrade() - 1)
 {
- 	(void)cpy;
- 	std::cout << CPYCNTOP  << std::endl;
-}
-
-void Bureaucrat::decrement()
-{
-	if (this->_grade >= 150)
+	if (_grade > 150)
 		throw Bureaucrat::GradeTooLowException();
-	this->_grade++;
-	
-}
-void Bureaucrat::increment()
-{
+	else if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	if (this->_grade >= 1)
-	this->_grade--;
-	
-}
-
-const char *Bureaucrat::GradeTooHighException::what() const throw()
-{
-	return ("Grade is to High" RST );
-	
-}
-
-const char *Bureaucrat::GradeTooLowException::what() const throw()
-{
-	return (RED "Grade is to low" RST);
-	
-}
-
-std::string Bureaucrat::getName() const
-{
-	return (this->_name);
-}
-
-int Bureaucrat::getGrade() const
-{
-	return (this->_grade);
-}
-
-std::ostream& operator<<(std::ostream &os, Bureaucrat const &Bur)
-{
-	os << Bur.getName() << " have a grade of " << Bur.getGrade() << std::endl;
-	return (os);
+ 	std::cout << CPY << " Bureaucrat"<< CNTOR CALL << std::endl;
+	std::cout << DRKBLU << _name << RST " has been created with a grade of " RED << _grade << RST << std::endl;
 }
