@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:02:24 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/13 12:39:45 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/17 11:55:41 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ class Form
 		//constructor destructor
 		Form();
 		Form(const std::string _name , const int _signing , const int _execute);
-		Form(const int _signing, const int _execute);
-		Form(const std::string _name);
 		Form(Form const &src);
 		~Form();
 		
@@ -43,7 +41,7 @@ class Form
 		void beSigned(const Bureaucrat &src);
 	class GradeTooHighException : public std::exception
 	{
-		public :
+		public : 
 			const char *what() const noexcept override;
 	};
 	class GradeTooLowException : public std::exception
