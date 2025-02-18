@@ -1,13 +1,32 @@
 
 #include "../../include/ShrubberyCreationForm.hpp"
+#include <fstream>
 
-
-std::string ShrubberyForm::getTarget() const
+std::string ShrubberyCreationForm::getTarget() const
 {
 	return (this->_target);
 }
 
-void ShrubberyForm::performaction()  const
+
+const char *ShrubberyCreationForm::FileProblemsException::what() const throw()
 {
-	std::cout << "i will create a file" << std::endl;
+	return (RED "the file has some troubles" RST);	
+}
+
+void ShrubberyCreationForm::performaction()  const
+{
+	std::ofstream outfile (this->_target + "_shruberry");
+
+	if (!outfile || !outfile.is_open())
+		throw (ShrubberyCreationForm::FileProblemsException());
+	outfile << "        *        \n";
+    outfile << "       ***       \n";
+    outfile << "      *****      \n";
+    outfile << "     *******     \n";
+    outfile << "    *********    \n";
+    outfile << "   ***********   \n";
+    outfile << "       |||        \n";
+    outfile << "       |||        \n";
+	outfile << "-----------------\n";
+	outfile.close();
 }

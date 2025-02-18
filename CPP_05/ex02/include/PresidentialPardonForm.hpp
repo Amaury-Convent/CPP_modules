@@ -11,12 +11,9 @@ class PresidentialPardonForm : protected AForm
 		void performaction() const override;
 
 	public :
-
 		PresidentialPardonForm(const std::string target);
+		PresidentialPardonForm(PresidentialPardonForm &src);
 		~PresidentialPardonForm();
 		void pardonPresidentialPardonForm();
-		
-
 		std::string getTarget() const;
-
 };

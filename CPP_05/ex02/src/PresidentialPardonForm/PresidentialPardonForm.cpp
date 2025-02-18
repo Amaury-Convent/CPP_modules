@@ -9,6 +9,6 @@ std::string PresidentialPardonForm::getTarget() const
 
 void PresidentialPardonForm::performaction() const
 {
-	std::cout << "i will create a file" << std::endl;
+	std::cout << this->_target << "has been pardoned by Zaphod Beeblebrox." << std::endl;
 }
-
+ 

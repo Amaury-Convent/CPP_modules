@@ -1,5 +1,6 @@
 
 #include "../../include/RobotomyRequestForm.hpp"
+#include <cstdlib>
 
 
 std::string RobotomyRequestForm::getTarget() const
@@ -10,5 +11,10 @@ std::string RobotomyRequestForm::getTarget() const
 
 void RobotomyRequestForm::performaction() const
 {
-	std::cout << "i will create a file" << std::endl;
+	int time = rand();
+
+	if (time %2 == 0)
+		std::cout << "i got here" << std::endl;
+	else 
+		std::cout << "no way it worked" << std::endl;
 }

@@ -2,7 +2,7 @@
 
 #include "AForm.hpp"
 
-class ShrubberyForm :  public AForm
+class ShrubberyCreationForm :  public AForm
 {
 
 	private :
@@ -12,11 +12,16 @@ class ShrubberyForm :  public AForm
 
 	public :
 
-		ShrubberyForm(const std::string target);
-		~ShrubberyForm();
+		ShrubberyCreationForm(const std::string target);
+		~ShrubberyCreationForm();
 		void create_tree();
 		
 
 		std::string getTarget() const;
+	class FileProblemsException : public std::exception
+	{
+		public :
+			const char *what() const noexcept override;
+	};
 
 };
