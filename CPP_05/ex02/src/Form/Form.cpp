@@ -12,10 +12,13 @@
 
 #include "../../include/AForm.hpp"
 
-AForm & AForm::operator=(AForm const & ref)
+AForm & AForm::operator=(const AForm & rhs) 
 {
-	this->_signed = ref.getSigningGrade();
-	return (*this);
+    if (this != &rhs)
+	{
+        this->_signed = rhs._signed;
+	}
+    return *this;
 }
 
 

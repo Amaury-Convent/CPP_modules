@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaury <amaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 16:02:24 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/17 13:06:44 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/19 12:52:59 by amaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ class Bureaucrat;
 
 class AForm
 {
-	protected :
+	private :
 		std::string _name;
 		const int _signing;
 		const int _execute;

@@ -2,17 +2,17 @@
 
 #include "AForm.hpp"
 
-class PresidentialPardonForm : protected AForm
+class PresidentialPardonForm : public AForm
 {
 
 	private :
 		const std::string _target;
-		const std::string type 	= "Presidential";
 		void performaction() const override;
 
 	public :
 		PresidentialPardonForm(const std::string target);
-		PresidentialPardonForm(PresidentialPardonForm &src);
+		PresidentialPardonForm(PresidentialPardonForm const &src);
+		PresidentialPardonForm & operator=(const PresidentialPardonForm & rhs);
 		~PresidentialPardonForm();
 		void pardonPresidentialPardonForm();
 		std::string getTarget() const;

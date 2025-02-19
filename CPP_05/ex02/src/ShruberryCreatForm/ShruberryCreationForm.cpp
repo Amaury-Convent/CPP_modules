@@ -13,6 +13,14 @@ const char *ShrubberyCreationForm::FileProblemsException::what() const throw()
 	return (RED "the file has some troubles" RST);	
 }
 
+ShrubberyCreationForm & ShrubberyCreationForm::operator=(const ShrubberyCreationForm & src)
+{
+	if (this != &src)
+		AForm::operator=(src);
+	return *this;
+}
+
+
 void ShrubberyCreationForm::performaction()  const
 {
 	std::ofstream outfile (this->_target + "_shruberry");

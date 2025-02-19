@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaury <amaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 09:43:30 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/13 12:40:58 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/19 12:15:21 by amaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Form & Form::operator=(Form const & ref)
 {
-	this->_signed = ref.getSigningGrade();
+	*this = ref;
 	return (*this);
 }
 

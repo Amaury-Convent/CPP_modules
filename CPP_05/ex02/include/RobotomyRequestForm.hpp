@@ -2,17 +2,18 @@
 
 #include "AForm.hpp"
 
-class RobotomyRequestForm : protected AForm
+class RobotomyRequestForm : public AForm
 {
 
 	private :
 		const std::string _target;
-		const std::string type 	= "Robot";
 		void performaction() const override;
 
 	public :
 	
 		RobotomyRequestForm(const std::string target);
+		RobotomyRequestForm(RobotomyRequestForm const &src);
+		RobotomyRequestForm & operator=(const RobotomyRequestForm & src);
 		~RobotomyRequestForm();
 		std::string getTarget() const;
 		void create_tree();

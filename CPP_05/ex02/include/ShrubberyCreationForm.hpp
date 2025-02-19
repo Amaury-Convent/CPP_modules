@@ -7,13 +7,14 @@ class ShrubberyCreationForm :  public AForm
 
 	private :
 		const std::string _target;
-		const std::string type 	= "Shrub";
 		void performaction() const override;
 
 	public :
 
 		ShrubberyCreationForm(const std::string target);
 		~ShrubberyCreationForm();
+		ShrubberyCreationForm(ShrubberyCreationForm const &src);
+		ShrubberyCreationForm & operator=(const ShrubberyCreationForm & src);
 		void create_tree();
 		
 
