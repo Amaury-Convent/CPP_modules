@@ -6,7 +6,7 @@
 #    By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 10:56:42 by aconvent          #+#    #+#              #
-#    Updated: 2025/02/23 12:18:15 by aconvent         ###   ########.fr        #
+#    Updated: 2025/02/23 12:18:03 by aconvent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ UNL = "\033[4m"
 
 ######## Static lib Name ########
 
-NAME = CPP_05_ex01
+NAME = CPP_05_ex03
 
 ######## Directories ########
 
@@ -57,7 +57,7 @@ OBJS := $(patsubst $(SRC_DIR)/%.cpp,$(OBJ_DIR)/%.o,$(SRCS))
 ######## Compiler and flags ########
 
 CPP := c++ 
-CFLAGS = -Wall -Wextra -Werror -std=c++11 -I ./include -MMD
+CFLAGS = -Wall -Wextra -Werror -std=c++11  -I ./include
 
 ######## first rule called by make ########
 

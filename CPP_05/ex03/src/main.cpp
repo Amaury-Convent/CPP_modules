@@ -6,45 +6,26 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 15:49:41 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/23 12:34:05 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/23 12:37:47 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../include/ShrubberyCreationForm.hpp"
-
 #include "../include/RobotomyRequestForm.hpp"
-
 #include "../include/PresidentialPardonForm.hpp"
-
+#include "../include/Intern.hpp"
 
 int main()
 {
-		try
-		{
-		
-		PresidentialPardonForm pres("boby");
-		PresidentialPardonForm lo = pres;
-		ShrubberyCreationForm Shrub("hello");
-		RobotomyRequestForm rob("lol");
-		
-		Bureaucrat il;
-		Bureaucrat ceo("BOSS",1);
-		
-		std::cout << il;
-		std::cout << std::endl;
-		std::cout << rob;
-		std::cout << std::endl;
-		std::cout << Shrub;
-		std::cout << std::endl;
-		std::cout << pres;
-		std::cout << std::endl;
-		
-		rob.beSigned(ceo);
-		std::cout << pres;
-		std::cout << std::endl;
-		rob.execute(ceo);
-		
-		
+	try
+	{
+		Bureaucrat a("Bob", 13);
+		Bureaucrat b("CEO", 1);
+		Intern lo;
+		AForm *Robot = lo.makeform("RobotomyRequestForm", "him"); 
+		Robot->beSigned(a);
+		std::cout << *Robot;
+		Robot->execute(a);
 	}
 	catch (Bureaucrat::GradeTooLowException &e)
 	{
@@ -67,6 +48,10 @@ int main()
 		std::cout << BLD DRKRED  "Exception is :" RST<< e.what() << std::endl;
 	}
 	catch (AForm::FormNotSignedException &e)
+	{
+		std::cout << BLD DRKRED  "Exception is :" RST<< e.what() << std::endl;
+	}
+	catch (Intern::FormnotexistingException &e)
 	{
 		std::cout << BLD DRKRED  "Exception is :" RST<< e.what() << std::endl;
 	}

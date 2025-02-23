@@ -6,7 +6,7 @@
 #    By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 10:56:42 by aconvent          #+#    #+#              #
-#    Updated: 2025/02/14 11:37:25 by aconvent         ###   ########.fr        #
+#    Updated: 2025/02/23 12:18:07 by aconvent         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ UNL = "\033[4m"
 
 ######## Static lib Name ########
 
-NAME = CPP_05_ex00
+NAME = CPP_05_ex02
 
 ######## Directories ########
 

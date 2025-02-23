@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 11:40:01 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/23 12:22:57 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/14 11:32:51 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,15 +63,14 @@
 
 // max values for Claptrap
  
- 
 # define CNTOR DRKGRN BLD "CONSTRUCTOR " RST
 # define DSTOR DRKRED BLD "DESTRUCTOR " RST
 
 
-# define DFLT BLD "default " RST
+# define DFLT "default "
 # define PAR CYN BLD "parametrized " RST
+# define CALL " has been called " RST 
+
 # define CPY BLD PINK "copy " RST
 
-# define CALL " has been called"
-
-# define ERR BGNRED BLD "ERROR" RST
+# define ERR BGNRED BLD "ERROR " RST

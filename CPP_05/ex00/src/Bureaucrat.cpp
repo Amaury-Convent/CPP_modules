@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 11:57:44 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/07 11:12:16 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/23 12:23:31 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ Bureaucrat::Bureaucrat() : _name("Bob"), _grade(120)
 		throw Bureaucrat::GradeTooLowException();
 	else if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	std::cout << DFLTCNTOR << std::endl;
+	std::cout << DFLT CNTOR CALL<< "to create" << this->getName();
+	std::cout << " with a grade of " << this->getGrade() << std::endl;
 	
 }
 
@@ -28,19 +29,20 @@ Bureaucrat::Bureaucrat(const std::string name , unsigned int grade) : _name(name
 		throw Bureaucrat::GradeTooLowException();
 	else if (_grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	std::cout << PARCNTOR << std::endl;
-	
+	std::cout << PAR CNTOR CALL<< "to create" << this->getName();
+	std::cout << " with a grade of " << this->getGrade() << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &src)
 {
  	this->_name = src._name;
 	this->_grade = src._grade;
- 	std::cout << CPYCNTOP  << std::endl;
+ 	std::cout << CPY CNTOR CALL<< "to create" << this->getName();
+	std::cout << " with a grade of " << this->getGrade() << std::endl;
 }
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << DFLTDSTOR  << std::endl;
+	std::cout << DFLT DSTOR << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &src)
@@ -59,7 +61,7 @@ void Bureaucrat::decrement()
 }
 void Bureaucrat::increment()
 {
-	if (this->_grade >= 1)
+	if (this->_grade <= 1)
 		throw Bureaucrat::GradeTooHighException();
 	this->_grade--;
 	

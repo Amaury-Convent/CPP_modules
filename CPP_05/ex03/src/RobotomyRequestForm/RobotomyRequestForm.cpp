@@ -12,7 +12,7 @@ std::string RobotomyRequestForm::getTarget() const
 RobotomyRequestForm & RobotomyRequestForm::operator=(const RobotomyRequestForm & src)
 {
 	if (this != &src)
-		*this = src;
+		AForm::operator=(src);
 	return *this;
 }
 

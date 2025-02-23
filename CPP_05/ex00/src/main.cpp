@@ -6,7 +6,7 @@
 /*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/05 14:37:26 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/05 14:44:33 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/23 12:19:11 by aconvent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	Bureaucrat hello;
 	Bureaucrat l("ella", 149);
-	Bureaucrat he("ali", 1);
+	Bureaucrat he("ali", 2);
 	try
 	{
 		std::cout << he;
