@@ -1,0 +1,3 @@
+A check if the input is one of the multiple edge cases 
+	+-inf char - impossible int impossible float +-inff double +-inf
+	nan  char - impossible int impossible float nanf double nan
