@@ -2,6 +2,13 @@
 #include "../include/Error.hpp"
 
 
+# include <iostream>
+# include <iomanip>
+# include <exception>
+# include <cstdlib>
+# include <limits>
+# include <cmath>
+
 int main(int ac, char **av)
 {
 	(void)av;
@@ -9,7 +16,7 @@ int main(int ac, char **av)
 	{
 		if (ac != 2)
 			throw(Error::ArgumentCount());
-
+		ScalarConverter::convert(av[1]);
 	}
 	catch (Error::ArgumentCount &e)
 	{
