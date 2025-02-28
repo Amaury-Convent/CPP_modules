@@ -1,30 +1,61 @@
 #include "../include/Converter.hpp"
 
+ScalarConverter::ScalarConverter()
+{}
 
-void inf_edge_case(std::string arg)
+ScalarConverter::~ScalarConverter()
+{}
+ScalarConverter::ScalarConverter(ScalarConverter & src)
 {
-	std::cout << "char : Impossible" << std::endl;
-	std::cout << "int : Impossible" << std::endl;
-	if (arg == "+inf"  || arg == "+inff" )
-		std::cout << "float : +inff" << std::endl;
-	else if  (arg == "-inf"  || arg == "-inff" )
-		std::cout << "float : -inff" << std::endl;
-	if (arg == "+inf"  || arg == "+inff" )
-		std::cout << "double : +inf" << std::endl;
-	else if  (arg == "-inf"  || arg == "-inff" )
-		std::cout << "double : -inf" << std::endl;
-	
+	*this = src;
 }
 
-void nan_edge_case()
+ScalarConverter & ScalarConverter::operator=(ScalarConverter &sc)
 {
-	std::cout << "char : Impossible" << std::endl;
-	std::cout << "int : Impossible" << std::endl;
-	std::cout << "float : nanf" << std::endl;
-	std::cout << "double : nan" << std::endl;
-	
+	if (this != &sc)
+        *this = sc;
+	return (*this);
 }
 
+
+
+void check_num(std::string arg)
+{
+	size_t sign = 0;
+	int dot = 0;
+	int non_int = 0;
+
+	if (arg[sign] == '-' || arg[sign] == '+')
+		sign++;
+	for (size_t i = 0 + sign;  i < arg.size() - 1; i++)
+	{
+
+		if (arg[i] == '.')
+			dot++;
+		if (!std::isdigit(arg[i]) && arg[i] != '.')
+			non_int++;
+	}
+	if (std::isdigit(arg[arg.size() - 1]) && dot == 0 && non_int == 0)
+		print_int(arg);
+	else if (std::isdigit(arg[arg.size() - 1]) && dot == 1 && non_int == 0)
+		print_double(arg);
+	else if (arg[arg.size() - 1] == 'f')
+		print_float(arg);
+	else 
+		print_impossible();
+}
+
+int parse_arg(std::string arg)
+{
+	std::cout << arg  << arg.length() << std::endl;
+	if ((arg.length() == 3 && arg[0] == arg[2] && arg[0] == '\''))
+		print_char(arg[1]);
+	if (arg.size() == 1 && !std::isdigit(arg[0]))
+		print_char(arg[0]);
+	else 
+		check_num(arg);
+	return (0);
+}
 
 void ScalarConverter::convert(std::string arg)
 {
@@ -32,10 +63,7 @@ void ScalarConverter::convert(std::string arg)
 		inf_edge_case(arg);
 	else if (arg == "nan")
 		nan_edge_case();
-	else 
-	{
-		
-	}
+	parse_arg(arg);
 }
 
 

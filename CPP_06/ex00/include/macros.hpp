@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   macros.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amaury <amaury@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/20 11:40:01 by aconvent          #+#    #+#             */
-/*   Updated: 2025/02/23 12:22:57 by aconvent         ###   ########.fr       */
+/*   Updated: 2025/02/27 17:35:20 by amaury           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,9 @@
 # define DSTOR DRKRED BLD "DESTRUCTOR " RST
 
 
-# define DFLT BLD "default " RST
-# define PAR CYN BLD "parametrized " RST
-# define CPY BLD PINK "copy " RST
-
-# define CALL " has been called"
+#define CHAR DRKBLU BLD "Char " RST ": "
+#define DBL DRKBLU BLD "Double " RST ": "
+#define INT DRKRED BLD "Int " RST ": "
+#define FLOAT DRKBLU BLD "Float " RST ": "
 
 # define ERR BGNRED BLD "ERROR" RST
