@@ -35,12 +35,12 @@ void check_num(std::string arg)
 		if (!std::isdigit(arg[i]) && arg[i] != '.')
 			non_int++;
 	}
-	if (std::isdigit(arg[arg.size() - 1]) && dot == 0 && non_int == 0)
+	if (std::isdigit(arg[arg.size() - 1]) && dot == 0 && non_int == 0 && arg.size() < 12)
 		print_int(arg);
-	else if (std::isdigit(arg[arg.size() - 1]) && dot == 1 && non_int == 0)
-		print_double(arg);
-	else if (arg[arg.size() - 1] == 'f')
+	else if (arg[arg.size() - 1] == 'f' && non_int == 0 )
 		print_float(arg);
+	else if (std::isdigit(arg[arg.size() - 1]) && non_int == 0)
+		print_double(arg);
 	else 
 		print_impossible();
 }

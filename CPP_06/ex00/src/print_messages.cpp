@@ -26,7 +26,7 @@ void nan_edge_case()
 
 void print_double(std::string arg)
 {
-	double d = std::stod(arg);
+	double d = std::atof(arg.c_str());
 	if (d < 0 || d > 127)
 		std::cout << CHAR "Impossible" << std::endl;
 	else if (std::isprint(d))
@@ -37,8 +37,14 @@ void print_double(std::string arg)
 		std::cout << INT "Impossible" << std::endl;
 	else 
 		std::cout <<  INT << static_cast<int>(d) << std::endl;
-	std::cout << FLOAT << static_cast<float>(d) << "f" <<std::endl;
-	std::cout << DBL << d << std::endl;
+	if (d < MIN_FLOAT || d > MAX_FLOAT)
+		std::cout << FLOAT "Impossible" << std::endl;
+	else 
+		std::cout << FLOAT << static_cast<float>(d) << "f" <<std::endl;
+	if (d < MIN_DOUBLE || d > MAX_DOUBLE)
+		std::cout << DBL "impossible" << std::endl;
+	else
+		std::cout << DBL << d << std::endl;
 }
 
 void print_int(std::string arg)

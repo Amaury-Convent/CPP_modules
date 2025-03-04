@@ -13,6 +13,7 @@ int main(int ac, char **av)
 {
 	try 
 	{
+		std::cout << MAX_INT << std::endl;
 		if (ac != 2)
 			throw(Error::ArgumentCount());
 		ScalarConverter::convert(av[1]);
