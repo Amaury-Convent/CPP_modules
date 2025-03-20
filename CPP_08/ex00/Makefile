@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aconvent <aconvent@student.42.fr>          +#+  +:+       +#+         #
+#    By: amaury <amaury@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/29 10:56:42 by aconvent          #+#    #+#              #
-#    Updated: 2025/02/25 10:21:26 by aconvent         ###   ########.fr        #
+#    Updated: 2025/03/20 20:16:11 by amaury           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ UNL = "\033[4m"
 
 ######## Static lib Name ########
 
-NAME = CPP_06_ex00
+NAME = CPP_08_ex00
 
 ######## Directories ########
 
