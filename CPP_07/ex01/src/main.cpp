@@ -4,7 +4,7 @@
 
 
 template <typename T>
-void check_odd_temp(T &t)
+void check_odd_temp(T const &t)
 {
 	if (t % 2 == 0)
 		std::cout << "this number is even " << t << std::endl;
